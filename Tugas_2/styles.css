@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-image: linear-gradient(to right,#A60042, #004C99);
+    color: white;
+    padding: 15px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li :hover{
+    background-color: maroon;
+    
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    animation-direction: normal;
+    font-size: 18px;
+}
+
+.hero {
+    background-image: url(Content/Camp-Nou.jpg);
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.hero-image img {
+    width: 200px;
+    margin-top: 20px;
+    
+}
+
+.about {
+    padding: 50px 20px;
+    background-color: #F4F4F4;
+    text-align: justify;
+}
+
+.about-text{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; 
+}
+
+.about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.gallery {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.gallery h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: auto auto;
+    gap: 4px;
+}
+
+.gallery-grid div {
+    overflow: hidden; 
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.1); 
+}
+
+.footer {
+    background-color: #181733;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.footer-logo img {
+    width: 70px;
+}
+
+.footer-logo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-contact {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-contact p {
+    margin: 5px 0;
+    text-align: left;
+}
+
+.contact2 a {
+    color: white;
+    text-decoration: none;
+}
+
+.contact2 :hover a {
+    color: cornflowerblue;
+}
+
+@media (max-width: 768px) {
+    .navbar ul{
+        flex-direction: column;
+        text-align: left;
+        padding: auto;
+    }
+
+    .hero{
+        margin-top: 100px;
+    }
+
+    .navbar ul li{
+        padding-bottom: 10px;
+    }
+
+    .about-text{
+        flex-direction: column;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-contact {
+        text-align: center;
+    }
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: auto auto;
+        gap: 4px;
+    }
+}
+
+@media (max-width: 500px) {
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: 1fr; 
+        grid-template-rows: auto auto;
+        gap: 4px;
+    }
+}
